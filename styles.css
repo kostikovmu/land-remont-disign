@@ -167,6 +167,51 @@ img {
   gap: 22px;
 }
 
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: rgba(7, 7, 10, 0.62);
+  backdrop-filter: blur(14px);
+}
+
+.lang-switch__button {
+  min-width: 46px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted-strong);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 220ms ease,
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+.lang-switch__button:hover {
+  color: var(--text);
+}
+
+.lang-switch__button.is-active {
+  background: rgba(255, 107, 53, 0.18);
+  color: var(--text);
+}
+
 .topnav a,
 .call-pill {
   color: var(--muted-strong);
@@ -1232,8 +1277,22 @@ h3 {
   }
 
   .call-pill {
-    padding-inline: 12px;
-    font-size: 0.66rem;
+    padding-inline: 10px;
+    font-size: 0.62rem;
+  }
+
+  .topbar-actions {
+    gap: 8px;
+  }
+
+  .lang-switch {
+    padding: 3px;
+  }
+
+  .lang-switch__button {
+    min-width: 36px;
+    padding: 7px 7px;
+    font-size: 0.62rem;
   }
 
   .hero-grid {

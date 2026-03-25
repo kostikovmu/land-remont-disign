@@ -1053,6 +1053,59 @@ h3 {
   display: none;
 }
 
+.service-marker-icon {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+}
+
+.service-marker {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 36px;
+  transform-origin: 50% 85%;
+  transition: transform 220ms ease, filter 220ms ease;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.32));
+}
+
+.service-marker::before,
+.service-marker::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(50% 0%, 84% 12%, 100% 44%, 76% 78%, 58% 100%, 24% 84%, 0% 44%, 14% 14%);
+}
+
+.service-marker::before {
+  background: linear-gradient(160deg, var(--coral) 0%, #ff9150 48%, var(--teal) 100%);
+}
+
+.service-marker::after {
+  inset: 5px 5px 9px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.05) 100%);
+  opacity: 0.55;
+}
+
+.service-marker__core {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 247, 239, 0.9);
+  border-radius: 2px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.32);
+}
+
+.service-marker-icon:hover .service-marker {
+  transform: translateY(-2px) rotate(-6deg) scale(1.06);
+  filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.38));
+}
+
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
   background: #0f0f14;

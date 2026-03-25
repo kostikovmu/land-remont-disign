@@ -207,13 +207,17 @@ const initMap = () => {
     maxZoom: 20,
   }).addTo(map);
 
+  const serviceMarkerIcon = L.divIcon({
+    className: "service-marker-icon",
+    html: '<span class="service-marker" aria-hidden="true"><span class="service-marker__core"></span></span>',
+    iconSize: [28, 36],
+    iconAnchor: [14, 31],
+    popupAnchor: [0, -26],
+  });
+
   Object.values(CITY_DATA).forEach((city) => {
-    L.circleMarker(city.coords, {
-      radius: 7,
-      color: "#FF6B35",
-      weight: 1,
-      fillColor: "#00E5C0",
-      fillOpacity: 0.85,
+    L.marker(city.coords, {
+      icon: serviceMarkerIcon,
     })
       .addTo(map)
       .bindPopup(`<strong>${city.label}</strong><br />Serving this area`);

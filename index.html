@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Florida Home Remodeling</title>
+    <meta
+      name="description"
+      content="Design + Build home remodeling landing page for Palm Coast, Daytona Beach, and Orlando."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Playfair+Display:ital,wght@1,400;1,500;1,700&amp;family=Space+Mono:wght@400;700&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="#hero" aria-label="Florida Home Remodeling">
+          <span class="brand-mark">FHR</span>
+          <span class="brand-copy">
+            <span>Florida Home Remodeling</span>
+            <span>Design + Build</span>
+          </span>
+        </a>
+        <nav class="topnav" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#portfolio">Projects</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#locations">Locations</a>
+        </nav>
+        <a class="call-pill" href="tel:+13865550149">(386) 555-0149</a>
+      </header>
+
+      <main>
+        <section class="hero panel" id="hero">
+          <div class="hero-media" aria-hidden="true"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-glow hero-glow-a" aria-hidden="true"></div>
+          <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
+          <div class="container hero-grid">
+            <div class="hero-copy reveal" style="--delay: 0ms">
+              <p class="eyebrow">Palm Coast / Daytona / Orlando</p>
+              <h1>YOUR FLORIDA HOME. REIMAGINED.</h1>
+              <p class="hero-subtitle">
+                Design + Build in Palm Coast, Daytona &amp; Orlando.
+              </p>
+              <p class="hero-body">
+                High-clarity remodeling with design, pricing, and build management
+                under one contractor. No guesswork. No scattered trades.
+              </p>
+            </div>
+
+            <form class="lead-form reveal" style="--delay: 120ms">
+              <span class="form-kicker">Free Consultation</span>
+              <h2>Get Free Estimate</h2>
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                <span>Phone</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="(386) 555-0149"
+                  required
+                />
+              </label>
+              <button class="pulse-button" type="submit">Get Free Estimate</button>
+              <p class="form-note">We call back within one business day.</p>
+              <p class="form-status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <div class="weather-strip">
+            <div class="weather-strip__inner container">
+              <span class="weather-label">Field Conditions</span>
+              <span class="weather-reading" data-weather>
+                Loading live Florida temperature...
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section class="services panel" id="services">
+          <div class="container">
+            <div class="section-head reveal" style="--delay: 0ms">
+              <p class="eyebrow">Core Services</p>
+              <h2>BUILT FOR DECISIONS, NOT DELAYS.</h2>
+            </div>
+
+            <div class="services-grid">
+              <article class="service-card reveal" style="--delay: 0ms">
+                <div class="service-line" aria-hidden="true"></div>
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M8 34h32M12 34V18l12-8 12 8v16M18 34V24h12v10" />
+                </svg>
+                <h3>Remodeling</h3>
+                <p>
+                  Full-room renovations with clean sequencing, permit awareness,
+                  and one accountable build team.
+                </p>
+              </article>
+
+              <article class="service-card reveal" style="--delay: 100ms">
+                <div class="service-line" aria-hidden="true"></div>
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path
+                    d="M10 34h28M14 30V14h20v16M18 18h12M18 22h8M24 30v-8"
+                  />
+                </svg>
+                <h3>Interior Design</h3>
+                <p>
+                  Materials, layouts, lighting, and finish logic resolved before
+                  crews start cutting into walls.
+                </p>
+              </article>
+
+              <article class="service-card reveal" style="--delay: 200ms">
+                <div class="service-line" aria-hidden="true"></div>
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path
+                    d="M8 34h32M12 34V16h10v18M26 34V12h10v22M16 22h2M16 26h2M30 18h2M30 22h2"
+                  />
+                </svg>
+                <h3>Custom Kitchens</h3>
+                <p>
+                  Cabinet sourcing, appliance planning, and durable layouts built
+                  around real traffic and storage needs.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="why-us panel">
+          <div class="section-divider" aria-hidden="true"></div>
+          <div class="container why-grid">
+            <div class="why-copy reveal" style="--delay: 0ms">
+              <p class="eyebrow">Why Homeowners Call Us First</p>
+              <h2>DESIGN. BUILD. DONE.</h2>
+            </div>
+            <div class="why-points">
+              <article class="why-point reveal" style="--delay: 50ms">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <path d="M7 16l6 6L25 10" />
+                </svg>
+                <div>
+                  <h3>One contractor from sketch to final walk-through</h3>
+                  <p>
+                    Design intent, pricing, schedules, and construction all stay in
+                    the same lane from day one.
+                  </p>
+                </div>
+              </article>
+              <article class="why-point reveal" style="--delay: 140ms">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <path d="M8 20h16M10 12h12M16 7v18" />
+                </svg>
+                <div>
+                  <h3>Fixed pricing without surprise add-ons</h3>
+                  <p>
+                    Budget decisions get made early, which keeps scope clean and
+                    avoids last-minute swings.
+                  </p>
+                </div>
+              </article>
+              <article class="why-point reveal" style="--delay: 230ms">
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <path d="M6 24l10-16 10 16M11 16h10" />
+                </svg>
+                <div>
+                  <h3>Top-tier suppliers with finish durability in mind</h3>
+                  <p>
+                    We source cabinetry, surfaces, and fixtures that hold up in
+                    humid Florida conditions.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="process panel">
+          <div class="container">
+            <div class="section-head reveal" style="--delay: 0ms">
+              <p class="eyebrow">Process</p>
+              <h2>CLARITY IN THREE MOVES.</h2>
+            </div>
+
+            <div class="process-rail">
+              <div class="process-line" aria-hidden="true"></div>
+              <article class="process-step reveal" style="--delay: 0ms">
+                <p class="process-step__eyebrow">Free Consultation</p>
+                <span class="process-step__number">01</span>
+                <p class="process-step__body">
+                  We review goals, measure constraints, and define the real scope
+                  before talking finishes.
+                </p>
+              </article>
+              <article class="process-step reveal" style="--delay: 150ms">
+                <p class="process-step__eyebrow">Design &amp; Budget</p>
+                <span class="process-step__number">02</span>
+                <p class="process-step__body">
+                  Layouts, materials, and pricing get aligned together so nothing
+                  important is left vague.
+                </p>
+              </article>
+              <article class="process-step reveal" style="--delay: 300ms">
+                <p class="process-step__eyebrow">Build &amp; Handover</p>
+                <span class="process-step__number">03</span>
+                <p class="process-step__body">
+                  We sequence the build, finish the punch list, and hand over a
+                  room that matches the approved plan.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="design-block panel">
+          <div class="container design-grid">
+            <blockquote class="design-quote reveal" style="--delay: 0ms">
+              “Good design doesn't cost more. It saves you from paying twice.”
+            </blockquote>
+            <div class="design-copy reveal" style="--delay: 100ms">
+              <p>
+                Design decisions made before demo reduce rework, protect 15–30% of
+                the budget, and give you a pricing map from the first day on site.
+              </p>
+              <p>
+                That means fewer substitutions, fewer stop-start decisions, and a
+                cleaner handoff between concept, sourcing, and construction.
+              </p>
+              <a class="teal-link" href="#offer">See how it works →</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="kitchens panel">
+          <div class="container">
+            <div class="section-head reveal" style="--delay: 0ms">
+              <p class="eyebrow">Signature Kitchens</p>
+              <h2>KITCHENS THAT OUTLAST TRENDS.</h2>
+            </div>
+          </div>
+
+          <div class="kitchens-film" data-film-strip>
+            <article
+              class="kitchen-card"
+              style="
+                --kitchen-image: url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&amp;fit=crop&amp;w=1200&amp;q=80');
+              "
+            >
+              <div class="kitchen-card__meta">
+                <h3>Shaker Warm Oak</h3>
+                <p>KraftMaid · $38k–$54k</p>
+              </div>
+            </article>
+            <article
+              class="kitchen-card"
+              style="
+                --kitchen-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&amp;fit=crop&amp;w=1200&amp;q=80');
+              "
+            >
+              <div class="kitchen-card__meta">
+                <h3>Modern Coastal</h3>
+                <p>Fabuwood · $42k–$60k</p>
+              </div>
+            </article>
+            <article
+              class="kitchen-card"
+              style="
+                --kitchen-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&amp;fit=crop&amp;w=1200&amp;q=80');
+              "
+            >
+              <div class="kitchen-card__meta">
+                <h3>Transitional White Oak</h3>
+                <p>Wellborn · $48k–$68k</p>
+              </div>
+            </article>
+            <article
+              class="kitchen-card"
+              style="
+                --kitchen-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80');
+              "
+            >
+              <div class="kitchen-card__meta">
+                <h3>Monochrome Luxe</h3>
+                <p>Bellmont · $55k–$78k</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="portfolio panel" id="portfolio">
+          <div class="container">
+            <div class="section-head reveal" style="--delay: 0ms">
+              <p class="eyebrow">Real Transformations</p>
+              <h2>BEFORE &amp; AFTER</h2>
+            </div>
+
+            <div class="comparison-grid">
+              <article class="comparison-card reveal" style="--delay: 0ms">
+                <div class="comparison-slider" data-position="50">
+                  <div
+                    class="comparison-image comparison-after"
+                    style="
+                      background-image: url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&amp;fit=crop&amp;w=1200&amp;q=80');
+                    "
+                  ></div>
+                  <div
+                    class="comparison-image comparison-before"
+                    style="
+                      background-image: url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&amp;fit=crop&amp;w=1200&amp;q=60');
+                    "
+                  ></div>
+                  <div class="comparison-label comparison-label--left">Before</div>
+                  <div class="comparison-label comparison-label--right">After</div>
+                  <button class="comparison-handle" type="button" aria-label="Drag comparison">
+                    <span class="sr-only">Drag comparison</span>
+                  </button>
+                </div>
+                <div class="comparison-meta">
+                  <h3>Palm Coast Kitchen Reset</h3>
+                  <p>Kitchen remodel · 7 weeks</p>
+                </div>
+              </article>
+
+              <article class="comparison-card reveal" style="--delay: 100ms">
+                <div class="comparison-slider" data-position="50">
+                  <div
+                    class="comparison-image comparison-after"
+                    style="
+                      background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&amp;fit=crop&amp;w=1200&amp;q=80');
+                    "
+                  ></div>
+                  <div
+                    class="comparison-image comparison-before"
+                    style="
+                      background-image: url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&amp;fit=crop&amp;w=1200&amp;q=50&amp;sat=-100');
+                    "
+                  ></div>
+                  <div class="comparison-label comparison-label--left">Before</div>
+                  <div class="comparison-label comparison-label--right">After</div>
+                  <button class="comparison-handle" type="button" aria-label="Drag comparison">
+                    <span class="sr-only">Drag comparison</span>
+                  </button>
+                </div>
+                <div class="comparison-meta">
+                  <h3>Daytona Beach Coastal Upgrade</h3>
+                  <p>Open-plan kitchen · 9 weeks</p>
+                </div>
+              </article>
+
+              <article class="comparison-card reveal" style="--delay: 200ms">
+                <div class="comparison-slider" data-position="50">
+                  <div
+                    class="comparison-image comparison-after"
+                    style="
+                      background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&amp;fit=crop&amp;w=1200&amp;q=80');
+                    "
+                  ></div>
+                  <div
+                    class="comparison-image comparison-before"
+                    style="
+                      background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&amp;fit=crop&amp;w=1200&amp;q=55&amp;sat=-100');
+                    "
+                  ></div>
+                  <div class="comparison-label comparison-label--left">Before</div>
+                  <div class="comparison-label comparison-label--right">After</div>
+                  <button class="comparison-handle" type="button" aria-label="Drag comparison">
+                    <span class="sr-only">Drag comparison</span>
+                  </button>
+                </div>
+                <div class="comparison-meta">
+                  <h3>Orlando Family Kitchen</h3>
+                  <p>Cabinet + island redesign · 8 weeks</p>
+                </div>
+              </article>
+
+              <article class="comparison-card reveal" style="--delay: 300ms">
+                <div class="comparison-slider" data-position="50">
+                  <div
+                    class="comparison-image comparison-after"
+                    style="
+                      background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80');
+                    "
+                  ></div>
+                  <div
+                    class="comparison-image comparison-before"
+                    style="
+                      background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&amp;fit=crop&amp;w=1200&amp;q=45&amp;sat=-100');
+                    "
+                  ></div>
+                  <div class="comparison-label comparison-label--left">Before</div>
+                  <div class="comparison-label comparison-label--right">After</div>
+                  <button class="comparison-handle" type="button" aria-label="Drag comparison">
+                    <span class="sr-only">Drag comparison</span>
+                  </button>
+                </div>
+                <div class="comparison-meta">
+                  <h3>Flagler Beach Cabinet Refresh</h3>
+                  <p>Kitchen facelift · 5 weeks</p>
+                </div>
+              </article>
+
+              <article class="comparison-card reveal" style="--delay: 400ms">
+                <div class="comparison-slider" data-position="50">
+                  <div
+                    class="comparison-image comparison-after"
+                    style="
+                      background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&amp;fit=crop&amp;w=1200&amp;q=80');
+                    "
+                  ></div>
+                  <div
+                    class="comparison-image comparison-before"
+                    style="
+                      background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&amp;fit=crop&amp;w=1200&amp;q=50&amp;sat=-100');
+                    "
+                  ></div>
+                  <div class="comparison-label comparison-label--left">Before</div>
+                  <div class="comparison-label comparison-label--right">After</div>
+                  <button class="comparison-handle" type="button" aria-label="Drag comparison">
+                    <span class="sr-only">Drag comparison</span>
+                  </button>
+                </div>
+                <div class="comparison-meta">
+                  <h3>Winter Park Entertainer's Kitchen</h3>
+                  <p>Luxury kitchen rework · 10 weeks</p>
+                </div>
+              </article>
+
+              <article class="comparison-card reveal" style="--delay: 500ms">
+                <div class="comparison-slider" data-position="50">
+                  <div
+                    class="comparison-image comparison-after"
+                    style="
+                      background-image: url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&amp;fit=crop&amp;w=1200&amp;q=80');
+                    "
+                  ></div>
+                  <div
+                    class="comparison-image comparison-before"
+                    style="
+                      background-image: url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&amp;fit=crop&amp;w=1200&amp;q=45&amp;sat=-100');
+                    "
+                  ></div>
+                  <div class="comparison-label comparison-label--left">Before</div>
+                  <div class="comparison-label comparison-label--right">After</div>
+                  <button class="comparison-handle" type="button" aria-label="Drag comparison">
+                    <span class="sr-only">Drag comparison</span>
+                  </button>
+                </div>
+                <div class="comparison-meta">
+                  <h3>Ormond Beach Great Room</h3>
+                  <p>Living area renovation · 6 weeks</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="offer panel" id="offer">
+          <div class="container offer-grid">
+            <div class="offer-copy reveal" style="--delay: 0ms">
+              <p class="eyebrow">Limited Planning Offer</p>
+              <h2>FREE DESIGN + FREE ESTIMATE</h2>
+              <p class="offer-subtitle">
+                No commitment. No pressure. Just clarity.
+              </p>
+            </div>
+
+            <form class="lead-form lead-form--light reveal" style="--delay: 120ms">
+              <span class="form-kicker">Start With A Call</span>
+              <h2>Book Your Free Session</h2>
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                <span>Phone</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="(386) 555-0149"
+                  required
+                />
+              </label>
+              <button class="dark-button" type="submit">Get Free Estimate</button>
+              <p class="form-note">Mon–Sat, 8am–6pm</p>
+              <p class="form-status" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+
+        <section class="reviews panel" id="reviews">
+          <div class="container">
+            <div class="section-head reveal" style="--delay: 0ms">
+              <p class="eyebrow">Client Feedback</p>
+              <h2>WHAT THE FINISHED ROOM FEELS LIKE.</h2>
+            </div>
+
+            <div class="reviews-grid">
+              <article class="review-card reveal" style="--delay: 0ms">
+                <div class="stars" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                </div>
+                <p>
+                  “The design work saved us from two expensive layout mistakes
+                  before construction even started. That alone paid for itself.”
+                </p>
+                <h3>Marcus &amp; Elena R.</h3>
+                <span>Palm Coast</span>
+              </article>
+
+              <article class="review-card reveal" style="--delay: 100ms">
+                <div class="stars" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                </div>
+                <p>
+                  “Fixed pricing mattered to us. The final numbers tracked exactly
+                  how the proposal was explained.”
+                </p>
+                <h3>Tanya M.</h3>
+                <span>Daytona Beach</span>
+              </article>
+
+              <article class="review-card reveal" style="--delay: 200ms">
+                <div class="stars" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                </div>
+                <p>
+                  “The team showed us design logic, not just mood boards. That made
+                  decision-making much faster.”
+                </p>
+                <h3>James P.</h3>
+                <span>Orlando</span>
+              </article>
+
+              <article class="review-card reveal" style="--delay: 300ms">
+                <div class="stars" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                </div>
+                <p>
+                  “Schedules were tight but realistic. We always knew what was next
+                  and when materials had to be signed off.”
+                </p>
+                <h3>Drew &amp; Anika S.</h3>
+                <span>Winter Park</span>
+              </article>
+
+              <article class="review-card reveal" style="--delay: 400ms">
+                <div class="stars" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                </div>
+                <p>
+                  “The supplier recommendations were sharp. Nothing felt trendy for
+                  the sake of being trendy.”
+                </p>
+                <h3>Helena G.</h3>
+                <span>Flagler Beach</span>
+              </article>
+
+              <article class="review-card reveal" style="--delay: 500ms">
+                <div class="stars" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.4 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z" /></svg>
+                </div>
+                <p>
+                  “They handled the project like a system, not a collection of
+                  disconnected trades. That made a big difference.”
+                </p>
+                <h3>Victor N.</h3>
+                <span>Daytona Beach</span>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="locations panel" id="locations">
+          <div class="locations-map" id="service-map" aria-label="Service area map"></div>
+          <div class="locations-overlay container">
+            <div class="section-head section-head--on-map reveal" style="--delay: 0ms">
+              <p class="eyebrow">Service Area</p>
+              <h2>WHERE WE BUILD.</h2>
+            </div>
+
+            <div class="city-pills">
+              <button class="city-pill is-active" type="button" data-city="palmCoast">
+                <span>Palm Coast</span>
+                <small>Serving this area</small>
+              </button>
+              <button class="city-pill" type="button" data-city="daytonaBeach">
+                <span>Daytona Beach</span>
+                <small>Serving this area</small>
+              </button>
+              <button class="city-pill" type="button" data-city="orlando">
+                <span>Orlando</span>
+                <small>Serving this area</small>
+              </button>
+            </div>
+
+            <p class="map-footnote">
+              Florida-licensed contractor · Serving Volusia, Flagler &amp; Orange
+              County
+            </p>
+          </div>
+        </section>
+
+        <section class="final-cta panel">
+          <div class="final-cta__media" aria-hidden="true"></div>
+          <div class="hero-overlay hero-overlay--heavy"></div>
+          <div class="container final-cta__content">
+            <div class="final-cta__copy reveal" style="--delay: 0ms">
+              <p class="eyebrow">Ready When You Are</p>
+              <h2>READY TO START?</h2>
+              <p class="hero-subtitle">
+                Most projects book 3–4 weeks out. Don't wait.
+              </p>
+              <div class="final-cta__actions">
+                <a class="pulse-button pulse-button--link" href="#offer">
+                  Get Your Free Design
+                </a>
+                <a class="phone-link" href="tel:+13865550149">(386) 555-0149</a>
+              </div>
+              <p class="final-cta__hours">Available Mon–Sat, 8am–6pm</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

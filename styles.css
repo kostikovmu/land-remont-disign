@@ -791,6 +791,7 @@ h3 {
 }
 
 .comparison-slider {
+  --comparison-position: 50%;
   position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
@@ -801,14 +802,15 @@ h3 {
 .comparison-image {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background-size: cover;
   background-position: center;
 }
 
 .comparison-before {
-  width: 50%;
-  border-right: 1px solid rgba(255, 255, 255, 0.22);
-  overflow: hidden;
+  z-index: 1;
+  clip-path: inset(0 calc(100% - var(--comparison-position)) 0 0);
+  will-change: clip-path;
 }
 
 .comparison-before::after {
@@ -821,6 +823,7 @@ h3 {
 .comparison-label {
   position: absolute;
   top: 16px;
+  z-index: 2;
   padding: 8px 10px;
   border-radius: 999px;
   background: rgba(10, 10, 14, 0.58);
@@ -843,6 +846,7 @@ h3 {
   top: 0;
   bottom: 0;
   left: 50%;
+  z-index: 3;
   width: 54px;
   transform: translateX(-50%);
   border: none;

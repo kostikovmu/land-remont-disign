@@ -106,8 +106,8 @@ const bindComparisonSlider = (slider) => {
   }
 
   const setPosition = (value) => {
-    const safeValue = Math.min(90, Math.max(10, value));
-    beforeLayer.style.width = `${safeValue}%`;
+    const safeValue = Math.min(100, Math.max(0, value));
+    slider.style.setProperty("--comparison-position", `${safeValue}%`);
     handle.style.left = `${safeValue}%`;
     slider.dataset.position = String(safeValue);
   };

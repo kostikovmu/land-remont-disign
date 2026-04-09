@@ -238,9 +238,6 @@ img {
   display: flex;
   align-items: stretch;
   padding-top: var(--header-height);
-}
-
-.hero {
   overflow: clip;
 }
 

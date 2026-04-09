@@ -1203,7 +1203,7 @@ const initMap = () => {
   const map = L.map(mapNode, {
     zoomControl: false,
     scrollWheelZoom: false,
-  }).setView(CITY_DATA.palmCoast.coords, 8);
+  });
 
   L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
     subdomains: "abcd",
@@ -1224,6 +1224,21 @@ const initMap = () => {
     }).addTo(map);
 
     appState.markers.set(cityKey, marker);
+  });
+
+  const showServiceArea = () => {
+    const bounds = L.latLngBounds(Object.values(CITY_DATA).map((city) => city.coords));
+
+    map.fitBounds(bounds, {
+      paddingTopLeft: [28, 24],
+      paddingBottomRight: [28, Math.max(84, Math.round(mapNode.clientHeight * 0.28))],
+      maxZoom: 8,
+    });
+  };
+
+  requestAnimationFrame(() => {
+    map.invalidateSize();
+    showServiceArea();
   });
 
   updateMapCopy();
